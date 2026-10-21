@@ -28,14 +28,23 @@ y se alcanza el 34% de las devoluciones, con ahorro neto positivo.
 Variables más influyentes según **SHAP**: días de entrega, puntaje de la ficha, categoría grifería y plomería, precio,
 logística por Colecta y descuento.
 
+### Gráficos principales
+**EDA:** tasa de devolución por categoría y por días de entrega
+![EDA](reports/figures/01_eda_principal.png)
+
+**Curvas ROC y precisión-recall en test**
+![Curvas](reports/figures/03_curvas_test.png)
+
+**Explicabilidad con SHAP**
+![SHAP](reports/figures/04_shap_beeswarm.png)
+
 ## Estructura
 ```
 proyecto-final-novohome/
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
-├── notebooks/
-│   └── proyecto_final_novohome.ipynb   # Pipeline completo, ejecutado y con salidas
+├── proyecto_final_novohome.ipynb       # Pipeline completo, ejecutado y con salidas
 ├── src/
 │   └── generar_datos.py                # Genera los datos sintéticos y los carga en SQLite
 ├── data/README.md                      # Descripción de los datos (la base se genera, no se versiona)
@@ -49,7 +58,7 @@ git clone <https://github.com/scarletluque0805/proyecto-final-novohome.git>
 cd proyecto-final-novohome
 python -m venv .venv && source .venv/bin/activate     # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-jupyter notebook notebooks/proyecto_final_novohome.ipynb   # Ejecutar todas las celdas
+jupyter notebook proyecto_final_novohome.ipynb   # Ejecutar todas las celdas
 ```
 **En Google Colab:** abrir una celda y ejecutar
 `!git clone <URL-de-este-repositorio> && cd proyecto-final-novohome && pip install -r requirements.txt`,
